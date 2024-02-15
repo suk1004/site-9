@@ -1,0 +1,140 @@
+header{
+  position: relative;
+  width: 100%;
+  height: 700px;
+  text-transform: uppercase;
+}
+
+.hback{
+  width: 100%;
+  height: inherit;
+  border-radius: 0 0 400px 0;
+}
+.hback>h2{
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  width: 1400px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #093471;
+  text-transform: uppercase;
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 110px;
+  background-color: #fff;
+}
+.gnb{
+  width: 1400px;
+  height: inherit;
+  margin: auto;
+  position: relative;
+}
+.logo{
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 150px;
+  background-color: #093471;
+  color: #fff;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+.gnbMenu{
+  display: flex;
+  height: inherit;
+  justify-content: right;
+  align-items: end;
+  
+}
+.gnbMenu>li{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 2px solid #2b5c93;
+  transition: 0.2s;
+  
+}
+.gnbMenu>li.active{
+  border-bottom: 5px solid #206dda;
+  color: #206dda;
+  font-weight: 700;
+  line-height: 35px;
+}
+.gnbMenu>li a{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.gnbMenu>li a:before,
+.gnbMenu>li a:after{
+  content: attr(data-link);
+  position: absolute;
+  width: 100%;
+  transition: 0.35s;
+}
+.gnbMenu>li a:before{
+  top: 0;
+  left: 0;
+}
+.gnbMenu>li a:after{
+  top: 100%;
+  left: 0;
+  color: #206dda;
+  font-weight: 700;
+}
+
+/* 호버효과 */
+.gnbMenu>li:not(.active):hover>a:before{top:-100%;}
+.gnbMenu>li:not(.active):hover>a:after{top:0;}
+.gnbMenu>li:not(.active):hover{
+  border-bottom: 5px solid #206dda;
+  line-height: 35px; 
+}
+
+
+/*/////////////// 서브메뉴 //////////////////*/
+
+.smenu{
+	display:none;
+	position:absolute;
+	top:100%;
+	z-index:1000;
+	border-left:solid 1px #e8e8e8;
+	width:200px;
+	height:200px;  
+	background:#fff;	
+}
+.last{border-right:solid 1px #e8e8e8;}
+.smenu>li{
+	padding:5px 0px;
+	text-align:center;
+	transition:all 0.4s;
+  line-height: 35px; 
+}
+.smenu>li:hover{background:#dbe4ea;}
+.smenu>li a{
+  font-size: 18px;
+  color:#666;
+  font-weight: 400;
+}
+.smenu li:hover a{color:#000;}
+
+.bg_box{   /*서브배경박스*/
+	display:none;
+	position:absolute;
+	top:110px; 
+	width:100%;
+	height:200px;
+	background:#fff;	
+}

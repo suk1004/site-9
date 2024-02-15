@@ -1,0 +1,263 @@
+@import url(common.css);
+@import url(footer.css);
+@import url(header.css);
+
+
+body{
+  background: url(../image/artist_back1.png) no-repeat center top;
+  background-size: cover;
+}
+.hback{
+  background: url(../image/headback2.jpg) center center;
+  background-size: cover;
+}
+
+
+#txt{
+  position:fixed;
+  top:100px;
+  right:100px;
+  z-index: 10000;
+}
+
+section{
+  width: 1400px;
+  margin: auto;
+  /* border: 1px solid #000; */
+}
+
+.location{
+  color: #206dda;
+  text-transform: uppercase;
+  font-weight: 500;
+  /* border: 1px solid #000; */
+  height: 60px;
+  line-height: 70px;
+}
+
+section hr{
+  border: 1px solid #e6e6e6;
+}
+
+/* ------------tab menu ------------ */
+
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
+
+.btn li{
+  width: 500px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  border-bottom: 1px solid #000;
+  background-color: aliceblue;
+  margin: 60px 0px;
+  font-size: 25px;
+}
+.btn li.active{
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #3a6299;
+  color: #fff;
+}
+
+/* --------------tab contents------------- */
+
+
+#tab1{
+  height: 2100px;
+}
+
+.today{
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.poster{
+  width: 350px;
+  height: 650px;
+
+}
+.posterimg{
+  width: 350px;
+  height: 480px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.poster img{ /* sub2-1 */
+  width: inherit;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+.posterimg>img{ /* sub3-1 */
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+  border-radius: 20px;
+  
+}
+
+
+.posterdesc{
+  font-size: 20px;
+  /* border: 1px solid #000; */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  text-transform: capitalize;
+  padding: 20px;
+  border-radius: 20px;
+}
+.posterdesc p:nth-child(1)>strong{
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.posterdesc p:nth-child(2){
+  margin-bottom: 10px;
+  color: #818181;
+  
+}
+
+.last1{
+  margin-top: 150px;
+}
+.last1>h2{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #3a6299;
+  color: #fff;
+}
+.search{
+  width: 800px;
+  margin: 20px auto 0;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.search input{
+  /* position: relative; */
+  width: 800px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #cecece;
+  box-shadow: 0 0 10px rgba(58, 98, 153, 0.5);
+  outline: none;
+  background:none;
+  padding: 0 70px 0 50px;
+  margin: 40px 0;
+  font-size: 25px;
+}
+.search input::placeholder{
+  font-size: 20px;
+}
+.search input:focus::placeholder{
+  opacity: 0;
+}
+.search button{
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  background: none;
+  cursor: pointer;
+}
+.search i{
+  /* border: 1px solid #000; */
+  /* position: absolute;
+  right: 0;
+  top:0; */
+  font-size: 30px;
+  color: #3a6299;
+  /* padding: 50px 20px; */
+  
+}
+
+
+.last_in{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.last_poster{
+  /* border: 1px solid #000; */
+  width: 32%;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.last_poster>img{
+  width: 180px;
+  height: 240px;
+  /* margin-right: 10px; */
+}
+.posterin{
+  /* border: 1px solid #000; */
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+}
+.posterin>p:nth-child(1){
+  margin-bottom: 20px;
+}
+.posterin>p:nth-child(1)>strong{
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+}
+.posterin>p:nth-child(2)>span{
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+/*  호버효과 */
+.last_poster:hover{
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(58, 98, 153, 0.5);
+}
+
+/* ////////////////월간일정////////////////////////// */
+
+.calender{
+  width: 1200px;
+  height: 1000px;
+  margin: auto;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+
+.calender td{
+  width: 160px;
+  vertical-align: top;
+  border-top: 2px solid #000;
+  /* font-size: 25px; */
+  padding: 5px;
+}
+thead{
+  height: 40px;
+  text-transform: uppercase; 
+  font-size: 20px;
+}
+tbody{
+  font-size: 30px;
+  font-weight: 300;
+}

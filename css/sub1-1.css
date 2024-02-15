@@ -1,0 +1,279 @@
+@import url(common.css);
+@import url(footer.css);
+@import url(header.css);
+
+
+body{
+  background: url(../image/artist_back1.png) no-repeat center top;
+  background-size: cover;
+}
+.hback{
+  background: url(../image/headback4.jpg);
+  background-size: cover;
+}
+#txt{
+  position:fixed;
+  top:100px;
+  right:100px;
+  z-index: 10000;
+}
+
+section{
+  width: 1400px;
+  margin: auto;
+  /* border: 1px solid #000; */
+}
+
+.location{
+  color: #206dda;
+  text-transform: uppercase;
+  font-weight: 500;
+  /* border: 1px solid #000; */
+  height: 60px;
+  line-height: 70px;
+}
+
+section hr{
+  border: 1px solid #e6e6e6;
+}
+
+/* ////////////////////dac artist//////////////////// */
+
+
+/* //////title////////// */
+
+.title{
+  height: 250px;
+  /* border: 1px solid #000; */
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+.title *{
+  margin-bottom: 15px;
+}
+.title h2{
+  font-size: 45px; 
+  color: #052045;
+}
+.title span{
+  display: block;
+  width: 200px;
+  height: 20px;
+  /* border: 1px solid #000; */
+  background: url(../image/titleline.png) no-repeat center center ;
+}
+
+/* //////artist////////// */
+
+.artist{
+  position: relative;
+  height: 1300px;
+  margin-top: 50px;
+  /* border: 1px solid #000; */
+}
+.artist h3{
+  position: absolute;
+  top: 4%;
+  left: 4%;
+  /* border: 1px solid #000; */
+  font-size: 40px;
+  color: #052045;
+}
+.artslide{
+  position: absolute;
+  right: 0;
+  width: 1200px;
+  height: 1020px;
+
+  /* border: 1px solid red; */
+  overflow-x: scroll;
+  /* z-index: -1; */
+}
+.myslider{
+  width: 1000px;
+  display: flex;
+  /* border: 1px solid #000; */
+
+}
+.slide{
+  width: 300px;
+  height: 1000px;
+  /* border: 1px solid green; */
+  padding: 170px 70px;
+  box-sizing: border-box;
+}
+.slide:nth-child(2n+1){
+  padding: 260px 70px;
+}
+.artistbox{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid #999999; */
+  margin-bottom: 200px;
+  z-index: 10000;
+}
+.artistbox>img{
+  width: 100%;
+  height: 100%;
+}
+.artistbox .aname1{
+  position: absolute;
+  top: -10%;
+  left: -115%;
+  width: 400px;
+  transform: rotate(-90deg);
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #bfd3f0;
+  /* border: 1px solid #000; */
+}
+
+.artistbox .aname2{
+  /* border: 1px solid #000; */
+  padding-top: 5px;
+  direction: rtl;
+}
+.artistbox .aname2>strong{
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+}
+/* 호버효과 */
+.artistbox:hover{
+  border-radius: 50%;
+}
+
+/* 스크롤바 스타일 */
+
+.artslide::-webkit-scrollbar{
+  width: 1200px;
+  height: 10px;
+}
+.artslide::-webkit-scrollbar-thumb{
+  position: relative;
+  background: #206dda;
+  /* max-width: 1200px; */
+}
+.artslide::-webkit-scrollbar-track{
+  background: #bfd3f0;
+}
+
+/* ///////art year/////// */
+.artyear{
+  position: relative;
+  width: 1400px;
+  height: 900px;
+  /* border: 1px solid #000; */
+  /* overflow:hidden; */
+}
+#artyearslide{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  overflow:hidden;
+}
+.artyearslide{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6000px;
+  /* border: 1px solid red; */
+  display: flex;
+}
+.artyearslide .year{
+  width: 690px;
+  height: 1000px;
+  border-top: 6px solid #bfd3f0;
+}
+.year>p{
+  font-size: 50px;
+  font-weight: 500;
+  padding: 20px;
+  color: #052045;
+}
+.year:nth-child(2n){border-top: 6px solid #206dda;}
+
+.artcons{
+  width: 700px;
+  height: 550px;
+  /* border: 1px solid #000; */
+  display: flex;
+}
+.artcon{
+  width: 250px;
+  height: 450px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  margin: 30px;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.artcon:nth-child(2n){
+  margin-top: 60px;
+}
+
+/* 호버효과 */
+.artcon:hover{
+  transform: translateY(-5%);
+  box-shadow: 0 0 20px rgba(215, 177, 117, 0.5);
+}
+
+/* poster */
+.artcon>img{
+  width: 190px;
+}
+.artcon>p{
+  margin-top: 15px;
+}
+.artcon>p>strong{
+  display: block;
+  font-size: 22px;
+}
+.artcon>p:nth-of-type(2){
+  font-size:14px;
+}
+
+/* art_btn */
+.art_btn{
+  position: absolute;
+  left: -100px;
+  bottom: 50%;
+  transform: translateY(-50%);
+  width: 1600px;
+  /* border: 1px solid #000; */
+  /* z-index: 100; */
+  display: flex;
+  justify-content: space-between;
+}
+.art_btn>span{
+  /* position: absolute; */
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-size: 70px;
+  color: #8baddf;
+  /* border: 1px solid #000; */
+  /* border-radius: 40px; */
+}
+.abtn_lt{
+  cursor: pointer;
+}
+.abtn_rt{
+  cursor: pointer;
+}
+
+.artyear h2{
+  padding: 10px;
+  font-size: 30px;
+  color: #052045;
+  /* border: 1px solid #000; */
+}
